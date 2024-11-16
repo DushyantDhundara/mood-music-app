@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+/* Styling for the music cards container */
+.music-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Each music card */
+.music-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Card hover effect */
+.music-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Spotify embed container */
+.spotify-embed-container {
+  position: relative;
+  padding-top: 56.25%; /* Aspect ratio for the player (16:9) */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.spotify-embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
